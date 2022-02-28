@@ -1,0 +1,25 @@
+{
+  "name": "nastaveni-nastroju",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Czechitas-podklady-WEB/nastaveni-nastroju.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Czechitas-podklady-WEB/nastaveni-nastroju/issues"
+  },
+  "homepage": "https://github.com/Czechitas-podklady-WEB/nastaveni-nastroju#readme",
+  "dependencies": {
+    "prompts": "^2.4.2",
+    "simple-git": "^3.2.6"
+  }
+}
