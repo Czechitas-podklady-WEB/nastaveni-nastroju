@@ -23,6 +23,6 @@ const response = await prompts(questions);
 
 git.addConfig('user.email', response.email, false, 'global');
 git.addConfig('user.name', response.name, false, 'global');
-git.addConfig('core.edtor', 'code --wait', false, 'global');
+git.addConfig('core.editor', 'code --wait', false, 'global');
 
 console.log('Výborně, vše je správně nastaveno.');
