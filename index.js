@@ -15,7 +15,7 @@ const questions = [
   },
 ];
 
-console.info(`Operační systém: ${os.type()} ${os.arch()} ${os.release()}`);
+console.info(`Operační systém: ${os.type()} ${os.arch()} ${os.release()}\n`);
 
 const response = await prompts(questions);
 
@@ -24,4 +24,4 @@ git.addConfig('user.email', response.email, false, 'global');
 git.addConfig('user.name', response.name, false, 'global');
 git.addConfig('core.editor', 'code --wait', false, 'global');
 
-console.info('Výborně, vše je správně nastaveno.');
+console.info('\n✓ Výborně, vše je správně nastaveno.');
