@@ -21,7 +21,7 @@ const printInfo = (text) => {
 }
 
 const printOK = (text) => {
-  printSymbol(kleur.green, '✔', text);
+  printSymbol(kleur.green, '✓', text);
 }
 
 const printDone = (text) => {
@@ -34,6 +34,9 @@ const printError = (text) => {
   printSymbol(kleur.red, '❌', text);
 }
 
+/**
+ * Kontrola verzí nainstalovaných programů.
+ */
 const checkVersions = async () => {
   printInfo(`Ověření instalace nástrojů pro kurz Digitální akademie WEB\n`);
   printOK(`Operační systém: ${os.type()} ${os.arch()} ${os.release()}`);
@@ -68,6 +71,9 @@ const checkVersions = async () => {
   }
 };
 
+/**
+ * Konfigurace Gitu (jméno, e-mail, editor).
+ */
 const configureGit = async () => {
   const questions = [
     {
@@ -98,19 +104,18 @@ const configureGit = async () => {
   printInfo(`Nastavení Gitu\n`);
   const response = await prompts(questions);
 
-  if (response) {
-    if (response.modifyGitUser) {
-      git.addConfig("user.email", response.email, false, "global");
-      git.addConfig("user.name", response.name, false, "global");
-      printOK("E-mail a jméno pro Git byly nakonfigurovány.");
-    }
-    if (response.vscode) {
-      git.addConfig("core.editor", "code --wait", false, "global");
-      printOK("VS Code pro Git byl nakonfigurován.");
-    }
+  if (response.modifyGitUser && response.email !== undefined && response.name !== undefined) {
+    git.addConfig("user.email", response.email, false, "global");
+    git.addConfig("user.name", response.name, false, "global");
+    printOK("E-mail a jméno pro Git byly nakonfigurovány.");
+  }
+  if (response.vscode) {
+    git.addConfig("core.editor", "code --wait", false, "global");
+    printOK("VS Code pro Git byl nakonfigurován.");
   }
 };
 
+// Spuštění jednotlivých kontrolních a nastavovacích funkcí.
 await checkVersions();
 await configureGit();
 printDone("Výborně, vše je připraveno.");
