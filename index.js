@@ -55,7 +55,6 @@ const checkVersions = async () => {
     printOK(`Git: ${String(gitVersion)}`);
   } else {
     printError(`Git: ${String(gitVersion)} – starší verze Gitu, doporučujeme aktualizaci.`);
-    printSymbol(kleur.red, '‼', 'Ve starších verzích Gitu byla objevena bezpečnostní chyba. Doporučujeme nainstalovat nejnovější verzi Gitu.');
     error = true;
   }
 
