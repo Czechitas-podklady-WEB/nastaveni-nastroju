@@ -1,17 +1,20 @@
 {
-  "name": "nastaveni-nastroju",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@czechitas/nastaveni-nastroju",
+  "version": "0.0.0",
+  "description": "Nástroj pro kontrolu instalací a dokončení počáteční konfigurace v kurzu Czechitas.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js"
   },
+  "bin": "bin/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Czechitas-podklady-WEB/nastaveni-nastroju.git"
   },
-  "keywords": [],
+  "keywords": [
+    "czechitas"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
