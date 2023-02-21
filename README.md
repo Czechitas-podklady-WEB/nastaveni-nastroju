@@ -5,13 +5,6 @@ Skript slouží pro ověření instalace nástrojů pro Digitální akademii WEB
 Spuštění:
 
 ```bash
-npm install
-npm start
-```
-
-nebo bez nutnosti stahovat předem kód
-
-```bash
 npx @czechitas/nastaveni-nastroju
 ```
 
