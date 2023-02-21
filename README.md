@@ -1,4 +1,4 @@
-# Ověření instalace nástrojů
+# Ověření instalace nástrojů [![npm](https://img.shields.io/npm/v/@czechitas/nastaveni-nastroju.svg)](https://www.npmjs.com/package/@czechitas/nastaveni-nastroju)
 
 Skript slouží pro ověření instalace nástrojů pro Digitální akademii WEB.
 
