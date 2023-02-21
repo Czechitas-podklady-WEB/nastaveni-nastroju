@@ -1,6 +1,6 @@
 {
   "name": "@czechitas/nastaveni-nastroju",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nástroj pro kontrolu instalací a dokončení počáteční konfigurace v kurzu Czechitas.",
   "main": "index.js",
   "type": "module",
